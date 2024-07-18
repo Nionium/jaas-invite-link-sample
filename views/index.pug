@@ -1,0 +1,30 @@
+doctype html
+html
+  head
+    style.
+      html, body, #jaas-container {
+        height: 100%;
+      }
+    script.
+      window.onload = () => {
+        const appId = "#{appId}";
+        const roomName = "#{roomName}";
+        const jwt = "#{jwt}";
+        
+        const script = document.createElement('script');
+        script.src = `https://8x8.vc/${appId}/external_api.js`;
+        script.async = true;
+        document.head.appendChild(script);
+        
+        const options = {
+            roomName: `${appId}/${roomName}`,
+            parentNode: document.querySelector('#jaas-container'),
+            ...(jwt ? { jwt } : {})
+        };
+
+        script.onload = () => {
+          const api = new JitsiMeetExternalAPI("8x8.vc", options);
+        };
+      }
+  body
+    #jaas-container
