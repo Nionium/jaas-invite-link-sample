@@ -49,7 +49,7 @@ app.get('/meet/:roomName', (req, res) => {
   /*
     The appId in your JaaS admin console. Please write it below.
   */
-  const appId = 'vpaas-magic-cookie-***';
+  const appId = 'vpaas-magic-cookie-2470d17a12394c6bacc2bbbe9e9d24d0';
 
   /*
     The roomName, a random string of alphanumeric characters.
