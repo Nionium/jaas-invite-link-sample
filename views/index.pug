@@ -1,10 +1,17 @@
 doctype html
 html
   head
+    meta(name='viewport', content='width=device-width, initial-scale=1')
     style.
       html, body, #jaas-container {
         height: 100%;
+        border: none;
+        margin:0px;
       }
+            iframe {
+        border: none;
+      }
+      
     script.
       window.onload = () => {
         const appId = "#{appId}";
